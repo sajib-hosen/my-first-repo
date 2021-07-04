@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Web Geolocation API</title>
+</head>
+
+
+
+<body>
+<p>In the name of allah</p>
+
+<h2>JavaScript Geolocation API</h2>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) { //if the browser supports the geolocation. the boolean value will be true.
+    navigator.geolocation.getCurrentPosition(showPosition, showError); //if the user allow to share the location. the "showPosition" function will execute.
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) { //the "position" argument will get the location autometically if the use alow to share the location.
+	console.log(position); //print the location.
+	console.log(position.coords);
+	console.log(position._proto_);
+	console.log("Accuracy: "+position.coords.accuracy);
+	console.log("Speed: "+position.coords.speed);
+	console.log("timespamp: "+position.coords.timestamp);
+	var la = position.coords.latitude;
+	var lo = position.coords.longitude;
+	var url ="https://www.google.com.bd/maps/@"+la+","+lo+",15z?hl=en&authuser=0"
+	x.innerHTML = "Latitude: " + la + 
+  "<br>Longitude: " + lo+ "<br>"+ url;
+}
+
+function showError(error) { //if the user denie to share the location of something crops-up the error function will execute wth error value.
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
+</body>
+
+</html>
