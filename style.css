@@ -1,0 +1,89 @@
+body{
+    background-color: #f3f3f3;
+    font-family: 'Otomanopee One', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+    margin-left: 5px;
+}
+.colorwillbe{
+    color: red;
+}
+.addimg{
+    background-image: url(https://freepngimg.com/thumb/animation/4-2-animation-png-pic.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.fcontainer{
+    display: flex;
+    margin-bottom: 100px;
+}
+.widthwillbe{
+    width: 50%;
+    padding: 5px;
+}
+.widthwillbe img{
+    width: 75%;
+    height: auto;;
+}
+.widthwillbe a{
+    text-decoration:none;
+    padding: 10px 3px;
+    border-radius: 5px;
+    background-color: rgb(26, 6, 26);
+    background-image: linear-gradient(white, rgba(2, 29, 22, 0.158));
+    color: white;
+    font-weight: 400;
+}
+.divbatman {
+    width: 50%;
+    padding: 5px;
+}
+.divbatman a{
+    text-decoration: none;
+    background-image: linear-gradient(white, grey);
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: white;
+}
+.divbatman img{
+    width: 80%;
+}
+.secondsection{
+    background-image: url(https://freepngimg.com/thumb/cup/6-coffee-cup-png-image.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.paragrapg{
+    display: flex;
+    padding: 10px;
+    background-image: url(https://freepngimg.com/thumb/google/63704-butterfly-wallpaper-google-colorful-desktop-free-png-hq.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.paragrapg div{
+    width: 50%;
+    margin: 12px;
+    box-shadow: 10px 10px 20px  rgb(37, 8, 65);
+    padding: 10px;
+    border-radius: 3px;
+    border-left: 10px;
+}
+.paragrapg h2{
+    color: rgb(39, 2, 54);
+}
+#exp-div-fst{
+    border-image: linear-gradient(pink, navy);
+    border-left: 7px solid;
+    border-image-slice: 2;
+}
+#exp-div-sec{
+    border-image: linear-gradient(navy, red);
+    border-left: 7px solid;
+    border-image-slice: 2;
+}
+footer p{
+    text-align: center;
+}
